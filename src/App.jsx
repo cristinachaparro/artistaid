@@ -1,29 +1,21 @@
 import "./App.css";
 
-import { NavLink, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Emojis from "./pages/Emojis";
 import Words from "./pages/Words";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/emojis" element={<Emojis />} />
         <Route path="/words" element={<Words />} />
       </Routes>
-      <div className="App">
-        <h1>Artistaid</h1>
-        <h3>Do you feel stuck in a rut with that project of yours?</h3>
-        <h4>Artistaid is here to help.</h4>
-        <h5>What do you need?</h5>
-        <NavLink to="/">
-          <button>Words</button>
-        </NavLink>
-        <NavLink to="/">
-          <button>Emojis</button>
-        </NavLink>
-      </div>
+      <Footer />
     </>
   );
 }
