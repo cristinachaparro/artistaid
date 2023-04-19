@@ -19,17 +19,27 @@ function Emojis() {
   };
 
   return (
-    <div>
+    <div className="text-center">
       <h1>How many do you need?</h1>
-      <span className="counter__output">{counter}</span>
-      <div className="btn-container">
-        <button className="control-btn" onClick={increase}>
+      <div className="justify-center items-center">
+        <button
+          className="control-btn bg-slate-800 text-yellow-500 rounded-full p-4 m-4"
+          onClick={increase}
+        >
           +
         </button>
-        <button className="control-btn" onClick={decrease}>
+        <span className="text-4xl font-bold">{counter}</span>
+        <button
+          className="control-btn bg-slate-800 text-yellow-500 rounded-full p-4 m-4"
+          onClick={decrease}
+        >
           -
         </button>
-        <button className="reset" onClick={reset}>
+        <br />
+        <button
+          className="reset bg-red-800 text-yellow-500 p-2 m-2"
+          onClick={reset}
+        >
           Reset
         </button>
       </div>
