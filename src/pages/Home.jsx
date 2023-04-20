@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="h-full w-full bg-yellow-500 text-center">
+    <div className="h-screen w-full bg-yellow-500 text-center">
       <h3 className="text-base p-6">
         Do you feel stuck in a rut with that project of yours?
       </h3>

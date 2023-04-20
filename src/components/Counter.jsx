@@ -1,9 +1,6 @@
 import { useState } from "react";
-import randomWords from "random-words";
 
-function Counter() {
-  const [counter, setCounter] = useState(0);
-
+function Counter({ counter, setCounter }) {
   //increase counter
   const increase = () => {
     if (counter < 5) {
@@ -46,11 +43,6 @@ function Counter() {
           >
             Reset
           </button>
-        </div>
-        <div>
-          {randomWords(counter).map((word) => (
-            <p>{word}</p>
-          ))}
         </div>
       </div>
     </>
