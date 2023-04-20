@@ -6,15 +6,16 @@ function Home() {
       <h3 className="text-base p-6">
         Do you feel stuck in a rut with that project of yours?
       </h3>
-      <p className="text-xl pb-4">Artistaid is here to help.</p>
+      <h1 className="title-2 text-3xl">Artistaid</h1>
+      <p className="text-xl pb-4">is here to help.</p>
       <p className="text-lg">What do you need?</p>
       <NavLink to="/words">
-        <button className="bg-slate-800 text-yellow-500 rounded-full p-2 m-4">
+        <button className="default-btn text-3xl bg-slate-800 text-yellow-500 rounded-full p-4 m-4">
           Words
         </button>
       </NavLink>
       <NavLink to="/emojis">
-        <button className="bg-slate-800 text-yellow-500 rounded-full p-2 m-4">
+        <button className="default-btn text-3xl bg-slate-800 text-yellow-500 rounded-full p-4 m-4">
           Emojis
         </button>
       </NavLink>
