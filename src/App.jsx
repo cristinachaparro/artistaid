@@ -10,15 +10,17 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <>
+    <div className="h-screen flex flex-col">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/emojis" element={<Emojis />} />
-        <Route path="/words" element={<Words />} />
-      </Routes>
+      <main className="bg-yellow-500 text-center grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/emojis" element={<Emojis />} />
+          <Route path="/words" element={<Words />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

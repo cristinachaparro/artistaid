@@ -24,14 +24,12 @@ function Emojis() {
 
   return (
     <>
-      <div className="bg-yellow-500 text-center">
-        <h1 className="text-center text-2xl p-5">Get inspired by emojis</h1>
-        <Counter counter={counter} setCounter={setCounter} />
-        <div className="text-center text-4xl p-8">
-          {result.map((emoji, i) => (
-            <p key={`${emoji}-${i}`}>{emoji}</p>
-          ))}
-        </div>
+      <h1 className="text-center text-2xl p-5">Get inspired by emojis</h1>
+      <Counter counter={counter} setCounter={setCounter} />
+      <div className="text-center text-4xl p-8">
+        {result.map((emoji, i) => (
+          <p key={`${emoji}-${i}`}>{emoji}</p>
+        ))}
       </div>
     </>
   );
