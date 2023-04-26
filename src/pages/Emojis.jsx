@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import emojisList from "emojis-list";
 
 import Counter from "../components/Counter";
@@ -9,25 +9,31 @@ import Counter from "../components/Counter";
 
 function Emojis() {
   const [counter, setCounter] = useState(0);
-
-  const result = [];
+  const [list, setList] = useState([]);
 
   //get a random position from the list of emojis
   function getRandomPos() {
     return Math.random() * (emojisList.length + 1);
   }
 
-  for (let i = 0; i < counter; i++) {
-    const randomPos = getRandomPos();
-    result.push(emojisList[Math.round(randomPos)]);
-  }
+  useEffect(() => {
+    //adding emojis
+    if (counter > list.length) {
+      const randomPos = getRandomPos();
+      const newEmoji = emojisList[Math.round(randomPos)];
+      setList([...list, newEmoji]);
+    } else if (counter < list.length) {
+      //delete as many elements as the counter indicates
+      setList(list.slice(0, counter));
+    }
+  }, [counter]);
 
   return (
     <>
       <h1 className="text-center text-2xl p-5">Get inspired by emojis</h1>
       <Counter counter={counter} setCounter={setCounter} />
       <div className="text-center text-4xl p-8">
-        {result.map((emoji, i) => (
+        {list.map((emoji, i) => (
           <p key={`${emoji}-${i}`}>{emoji}</p>
         ))}
       </div>

@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <div className="h-full flex flex-col justify-center">
-      <h3 className="text-base p-6">
-        Do you feel stuck in a rut with that project of yours?
+      <h3 className="text-base p-4 m-5">
+        Are you stuck in a rut with that project of yours?
       </h3>
       <h1 className="font-rubik text-3xl">Artistaid</h1>
       <p className="text-xl pb-4">is here to help.</p>
