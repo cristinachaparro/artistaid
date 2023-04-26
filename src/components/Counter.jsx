@@ -25,17 +25,17 @@ function Counter({ counter, setCounter }) {
         <div className="justify-center items-center">
           <button
             className="font-rubik text-2xl control-btn bg-slate-800 text-yellow-500 rounded-full m-4 w-12 h-12"
-            onClick={increase}
+            onClick={decrease}
           >
-            &#43;
-            {/* &plus; doesn't work */}
+            &minus;
           </button>
           <span className="text-4xl font-bold">{counter}</span>
           <button
             className="font-rubik text-2xl control-btn bg-slate-800 text-yellow-500 rounded-full m-4 w-12 h-12"
-            onClick={decrease}
+            onClick={increase}
           >
-            &minus;
+            &#43;
+            {/* &plus; doesn't work */}
           </button>
           <br />
           <button
